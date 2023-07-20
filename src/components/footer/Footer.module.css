@@ -1,0 +1,23 @@
+.footer {
+    grid-area: f;
+    display: grid;
+    grid-template-areas:
+    "l c r";
+    grid-template-columns: repeat(auto-fit, 1fr);
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+.left {
+    grid-area: l;
+}
+
+.center {
+    grid-area: c;
+    color: white;
+    margin: 0 auto;
+}
+
+.right {
+    grid-area: r;
+}

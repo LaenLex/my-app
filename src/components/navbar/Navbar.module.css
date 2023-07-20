@@ -1,0 +1,16 @@
+.nav {
+    grid-area: n;
+    font-size: 2em;
+    font-family: Rasa, serif;
+    background: rgb(218, 215, 255);
+    background: linear-gradient(45deg, rgb(44, 39, 82) 0%, rgb(191, 191, 255) 35%, rgb(203, 236, 250) 100%);
+
+}
+
+.item {
+    color: indigo;
+}
+
+.item.active {
+    color: brown;
+}
