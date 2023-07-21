@@ -4,13 +4,9 @@
     font-family: Rasa, serif;
     background: rgb(218, 215, 255);
     background: linear-gradient(45deg, rgb(44, 39, 82) 0%, rgb(191, 191, 255) 35%, rgb(203, 236, 250) 100%);
-
+    padding: 1em;
 }
 
-.item {
-    color: indigo;
-}
+.item{
 
-.item.active {
-    color: brown;
 }

@@ -1,10 +1,14 @@
 import s from './MyPosts.module.css'
 import Post from "./post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
+
+    let postsElements = props.postsData
+        .map(post =>
+            <Post message={post.message} likes={post.likes}/>);
+
     return (
         <div className={s.activity}>
-
             My posts
             <div>
                 <textarea></textarea>
@@ -12,8 +16,7 @@ const MyPosts = () => {
                 <button>Update</button>
             </div>
             <div className={s.posts}>
-                <Post message='Hi, how are you?' likes='30'/>
-                <Post message='It is my first props' likes='20'/>
+                {postsElements}
             </div>
         </div>
     );

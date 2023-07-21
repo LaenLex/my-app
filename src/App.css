@@ -15,3 +15,14 @@
 .app-wrapper-content {
   background-color: cyan;
 }
+
+a:any-link{
+    color: blueviolet;
+    text-decoration: none;
+}
+
+a.active{
+    color: brown;
+    cursor: pointer;
+    text-decoration: none;
+}

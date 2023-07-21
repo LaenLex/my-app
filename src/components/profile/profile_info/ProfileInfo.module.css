@@ -1,0 +1,57 @@
+.content {
+    grid-area: c;
+    display: grid;
+    grid-template-areas:
+    "l l"
+    "p d"
+    "a a";
+    grid-template-columns: 2fr 10fr;
+    grid-template-rows: 8em auto 1fr;
+}
+
+.landscape {
+    grid-area: l;
+    max-height: 8em;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.landscape img {
+    width: 100%;
+    height:100%;
+}
+
+.description {
+    grid-area: d;
+}
+
+.name {
+    font-size: 6em;
+    font-family: Rasa, serif;
+}
+
+.info {
+    font-size: 2em;
+    font-family: Rasa, serif;
+}
+
+.old {
+    font-size: 2em;
+    font-family: Rasa, serif;
+}
+
+.photo {
+    grid-area: p;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+}
+
+.photo img {
+    width: 10em;
+    height: 10em;
+    border-radius: 20px;
+}
