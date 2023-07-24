@@ -1,5 +1,10 @@
-.nav {
+.sidemenu {
     grid-area: n;
+    display: grid;
+    grid-template-areas:
+    "h"
+    "f";
+    grid-template-rows: 1fr 2fr;
     font-size: 2em;
     font-family: Rasa, serif;
     background: rgb(218, 215, 255);
@@ -7,6 +12,10 @@
     padding: 1em;
 }
 
-.item{
+.nav {
+    grid-area: h;
+}
+
+.item {
 
 }

@@ -8,20 +8,20 @@
   "n c"
   "f f";
     grid-template-rows: 100px auto 100px;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 3fr 10fr;
     grid-gap: 2px;
 }
 
 .app-wrapper-content {
-  background-color: cyan;
+    background-color: cyan;
 }
 
-a:any-link{
+a:any-link {
     color: blueviolet;
     text-decoration: none;
 }
 
-a.active{
+a.active {
     color: brown;
     cursor: pointer;
     text-decoration: none;

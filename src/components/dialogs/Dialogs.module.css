@@ -2,6 +2,12 @@
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
+.dialogs .dialogsItems img{
+    width: 3em;
+    height: 3em;
+    padding-right: 5px;
+    border-radius: 1em;
+}
 
 .dialogs .dialogsItems{
     padding: 1em;
@@ -20,4 +26,7 @@
 }
 
 .messages .message {
+    border: coral 3px dashed;
+    padding: 5px;
+    margin: 1em;
 }
