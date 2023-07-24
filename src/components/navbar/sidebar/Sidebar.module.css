@@ -1,0 +1,19 @@
+.info img {
+    height: 2em;
+    width: 2em;
+    border-radius: 3em;
+}
+
+.name {
+    font-size: 20px;
+}
+
+.friends {
+    display: grid;
+    grid-template-columns: repeat(3, 1em);
+    grid-column-gap: 1.5em;
+}
+
+.friendsInfo {
+    grid-area: f;
+}
