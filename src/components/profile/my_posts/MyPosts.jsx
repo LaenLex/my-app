@@ -7,20 +7,26 @@ const MyPosts = (props) => {
 
     let postsElements = props.postsData
         .map(post =>
-            <Post message={post.message} likes={post.likes}/>);
+            <Post key={post.id} message={post.message} likes={post.likes}/>);
 
     let newPostElement = createRef();
+
     let addPost = () => {
-        let text = newPostElement.current.value;
-        props.addPost(text);
+        props.store.addPost();
     };
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        props.store.updateNewPostText(text);
+    }
 
     return (
         <div className={s.activity}>
             My posts
             <div>
                 <div>
-                    <textarea ref={newPostElement}></textarea>
+                    <textarea onChange={onPostChange} ref={newPostElement}
+                              value={props.newPostText}></textarea>
                 </div>
                 <div>
                     <button onClick={addPost}>Create</button>
