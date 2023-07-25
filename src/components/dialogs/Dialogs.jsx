@@ -8,17 +8,21 @@ const Dialogs = (props) => {
 
     let dialogsElements = props.pageData.dialogsData
         .map(dialog =>
-            <DialogItem id={dialog.id} name={dialog.name} url={dialog.url}/>);
+            <DialogItem key={dialog.id} name={dialog.name} url={dialog.url}/>);
 
     let messagesElements = props.pageData.messagesData
         .map(message =>
-            <Message message={message.message}/>)
+            <Message key={message.id} message={message.message}/>)
 
     let newMessageElement = createRef();
 
     let addMessage = () => {
-        let newText = newMessageElement.current.value;
-        alert(newText);
+        props.store.addMessage();
+    }
+
+    let updateNewMessageText = () => {
+        let text = newMessageElement.current.value;
+        props.store.updateNewMessageText(text);
     }
 
     return (
@@ -29,7 +33,9 @@ const Dialogs = (props) => {
             <div className={s.messages}>
                 <div>{messagesElements}</div>
                 <div>
-                    <textarea ref={newMessageElement}></textarea>
+                    <textarea onChange={updateNewMessageText}
+                              ref={newMessageElement}
+                              value={props.pageData.newMessageText}></textarea>
                 </div>
                 <div>
                     <button onClick={addMessage}>Create message</button>
