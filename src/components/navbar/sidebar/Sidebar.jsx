@@ -2,7 +2,7 @@ import s from './Sidebar.module.css'
 import Friend from "./Friend/Friend";
 
 const Sidebar = (props) => {
-    let postsElements = props.friends
+    let postsElements = props.sidebar.friends
         .map(friend =>
             <Friend key={friend.id} url={friend.url} name={friend.name}/>);
     return (
